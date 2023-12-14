@@ -2,7 +2,7 @@
 <div
     style="height: 47px; padding: 10px; font-size: 14px; border: 1px solid; border-radius: 10px; border-color: #42d2ff; display: flex; align-items: center; justify-content: center; margin-bottom: 10px">
     <div style="flex: 1">
-        Cache advance offer of up to $1,400 has been pre-approved.
+        Cache advance offer of up to $1,410 has been pre-approved.
     </div>
     <div style="color: #42d2ff; cursor: pointer">Accept Offer</div>
     <div

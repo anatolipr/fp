@@ -2,7 +2,7 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 
-scriptSource = (function(scripts) {
+const scriptSource = (function(scripts) {
     var scripts = document.getElementsByTagName('script'),
            script = scripts[scripts.length - 1];
    if (script.getAttribute.length !== undefined) {
@@ -19,9 +19,11 @@ const getParamsFromURI = ( uri ) => {
     return new URLSearchParams( paramString );
   };
 
-const selector = getParamsFromURI(scriptSource()).get('s')
-
-document.querySelector(selector) //'#dashLeftCol'
-    .insertAdjacentHTML('afterbegin', '<div id="app"></div>')
-
+const selector = getParamsFromURI(scriptSource).get('s')
+try {
+    document.querySelector(selector) //'#dashLeftCol'
+        .insertAdjacentHTML('afterbegin', '<div id="app"></div>')
+} catch(e) {
+    console.error(e)
+}
 createApp(App).mount('#app')

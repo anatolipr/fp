@@ -8,8 +8,8 @@ import App from './App.vue'
 
 try {
     const [,src] = import.meta.url.split("?")
-    const root = document.querySelector(new URLSearchParams(src).get('s'))
-    .attachShadow({ mode: "open" })
+    const target = document.querySelector(new URLSearchParams(src).get('s'))
+    const root = target.attachShadow({ mode: "open" });
     root.insertAdjacentHTML('afterbegin', '<div id="app"></div>')
 } catch(e) {
     console.error(e)

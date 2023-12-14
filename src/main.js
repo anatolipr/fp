@@ -7,10 +7,8 @@ import App from './App.vue'
 
 
 try {
-    const currentScript = document.querySelector('#someUniqueId')
-    const selector = currentScript.dataset.s
-
-    document.querySelector(selector) //'#dashLeftCol'
+    const [,src] = import.meta.url.split("?");
+    document.querySelector(new URLSearchParams(src).get('s')) //'#dashLeftCol'
         .insertAdjacentHTML('afterbegin', '<div id="app"></div>')
 } catch(e) {
     console.error(e)

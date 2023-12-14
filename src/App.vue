@@ -1,7 +1,7 @@
 <template>
     <div style="height: 47px" class="layout">
         <div class="title">
-            Cache advance offer of up to $1,400 has been pre-approved.
+            Cache advance offer of up to $1,300 has been pre-approved.
         </div>
         <div class="accept" v-on:click="accept">Accept Offer</div>
         <div

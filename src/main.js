@@ -7,9 +7,10 @@ import App from './App.vue'
 
 
 try {
-    const [,src] = import.meta.url.split("?");
-    document.querySelector(new URLSearchParams(src).get('s')) //'#dashLeftCol'
-        .insertAdjacentHTML('afterbegin', '<div id="app"></div>')
+    const [,src] = import.meta.url.split("?")
+    const root = document.querySelector(new URLSearchParams(src).get('s'))
+    .attachShadow({ mode: "open" })
+    root.insertAdjacentHTML('afterbegin', '<div id="app"></div>')
 } catch(e) {
     console.error(e)
 }

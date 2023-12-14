@@ -15,6 +15,7 @@
 </template>
 
 <style scoped>
+    @import url('https://fonts.googleapis.com/css?family=Mulish:400,600,700');
 
     .layout {
       padding: 10px;
@@ -25,7 +26,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 10px
+      margin-bottom: 10px;
+      font-family: 'Mulish', sans-serif;
     }
 
     .title {

@@ -4,7 +4,10 @@
             Cache advance offer of up to $1,400 has been pre-approved.
         </div>
         <div class="accept" v-on:click="accept">Accept Offer</div>
-        <div style="width: 19px; height: 17px" class="close" v-on:click="close">
+        <div
+            style="width: 19px; height: 17px"
+            class="closebtn"
+            v-on:click="close">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                 <path
                     fill="currentColor"
@@ -39,7 +42,7 @@
       cursor: pointer
     }
 
-    .close {
+    .closebtn {
       margin-left: 10px;
       cursor: pointer
     }

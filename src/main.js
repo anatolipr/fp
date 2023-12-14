@@ -2,15 +2,10 @@ import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
 
-
-
-
-
 try {
     const [,src] = import.meta.url.split("?")
     const target = document.querySelector(new URLSearchParams(src).get('s'))
-    const root = target.attachShadow({ mode: "open" });
-    root.insertAdjacentHTML('afterbegin', '<div id="app"></div>')
+    target.insertAdjacentHTML('afterbegin', '<div id="app"></div>')
 } catch(e) {
     console.error(e)
 }
